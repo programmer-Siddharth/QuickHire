@@ -3,9 +3,8 @@ const mongoose = require('mongoose');
 // 'mongodb+srv://Siddharth_G:Password@cluster0.q0kq1u8.mongodb.net/?retryWrites=true&w=majority';
 const ConnectToMongo = async () => {
     try {
-        await mongoose.connect(`${process.env.URI}`, () => {
-            console.log('Connected to Database');
-        })
+        await mongoose.connect(`${process.env.URI}`);
+        console.log('Connected to Database');
     }
     catch (error) {
         console.log(error);
